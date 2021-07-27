@@ -1,0 +1,27 @@
+INFO: 2021/07/22 14:02:01 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:09:47 middleware.go:62: Unauthorized
+INFO: 2021/07/22 14:11:45 user.go:64: Error 1054: Unknown column '' in 'field list'
+INFO: 2021/07/22 14:12:51 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:12:55 user.go:64: Error 1292: Incorrect datetime value: 'current_timestamp' for column `city_v2`.`users`.`deleted_at` at row 1
+INFO: 2021/07/22 14:15:40 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:16:00 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:16:46 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:18:42 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:23:34 user.go:48: Error 1062: Duplicate entry 'testuser2' for key 'username'
+INFO: 2021/07/22 14:24:57 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:25:33 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:26:07 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:28:08 user.go:36: Error 1062: Duplicate entry '7-0' for key 'company_id'
+INFO: 2021/07/22 14:28:24 user.go:36: Error 1062: Duplicate entry '7-0' for key 'company_id'
+INFO: 2021/07/22 14:28:53 user.go:36: Error 1062: Duplicate entry '7-0' for key 'company_id'
+INFO: 2021/07/22 14:33:55 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:33:57 user.go:116: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%?%' at line 1
+INFO: 2021/07/22 14:35:39 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:35:40 user.go:116: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%?%' at line 1
+INFO: 2021/07/22 14:36:23 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:37:59 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:38:35 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:39:56 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:41:36 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:42:50 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/22 14:43:00 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'

@@ -1,0 +1,21 @@
+ [
+    {
+      "medicament_id": 1,
+      "cw_dispensing_form_quantity": 10,
+      "cw_dosage_form_quantity": 10,
+      "branches": [
+        {
+          "id": 1,
+          "name": "Dori darmon",
+          "dispensing_form_quantity": 10,
+          "dosage_form_quantity": 10
+        },
+        {
+          "id": 41,
+          "name": "Dori darmon 1",
+          "dispensing_form_quantity": 0,
+          "dosage_form_quantity": 0
+        }
+      ]
+    }
+  ]

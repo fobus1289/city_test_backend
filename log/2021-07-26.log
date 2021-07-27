@@ -1,0 +1,33 @@
+INFO: 2021/07/26 00:05:05 init.go:62: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 00:15:41 init.go:62: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 00:41:53 init.go:66: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 01:10:37 init.go:70: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 01:34:20 init.go:70: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 01:34:52 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:34:01 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:35:34 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:38:10 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:38:38 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:39:20 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 02:40:21 init.go:74: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 07:29:20 auth.go:32: unauthorized
+INFO: 2021/07/26 07:32:09 auth.go:33: unauthorized
+INFO: 2021/07/26 07:33:54 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 07:34:29 auth.go:32: unauthorized
+INFO: 2021/07/26 08:07:29 middleware.go:48: Unauthorized
+INFO: 2021/07/26 08:15:51 auth.go:32: unauthorized
+INFO: 2021/07/26 08:16:25 auth.go:32: unauthorized
+INFO: 2021/07/26 13:31:28 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 13:35:21 main.go:42: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/26 13:44:13 main.go:42: error auth socket invalid token reason:  illegal base64 data at input byte 0
+INFO: 2021/07/26 13:49:39 main.go:42: error auth socket invalid token reason:  illegal base64 data at input byte 0
+INFO: 2021/07/26 13:51:01 main.go:42: error auth socket invalid token reason:  illegal base64 data at input byte 0
+INFO: 2021/07/26 13:52:05 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 13:52:17 main.go:44: error auth socket invalid token reason:  illegal base64 data at input byte 0
+INFO: 2021/07/26 14:26:58 main.go:44: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/26 17:34:21 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 17:35:40 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 17:38:17 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 17:43:51 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 17:45:22 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/26 17:46:32 main.go:44: error auth socket invalid token reason:  token contains an invalid number of segments

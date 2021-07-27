@@ -1,0 +1,48 @@
+INFO: 2021/07/21 01:57:57 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:02:13 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:08:20 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:11:29 middleware.go:80: Unauthorized
+INFO: 2021/07/21 02:12:48 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:12:49 middleware.go:80: Unauthorized
+INFO: 2021/07/21 02:13:59 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:14:05 test_controller.go:35: CreateProduct
+INFO: 2021/07/21 02:15:08 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:15:10 test_controller.go:35: CreateProduct
+INFO: 2021/07/21 02:20:15 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:20:32 middleware.go:77: Unauthorized
+INFO: 2021/07/21 02:31:09 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:33:04 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:33:27 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:42:54 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:43:15 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:43:33 test_controller.go:35: CreateProduct
+INFO: 2021/07/21 02:44:20 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:44:21 test_controller.go:35: CreateProduct
+INFO: 2021/07/21 02:50:24 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:50:42 middleware.go:59: Unauthorized
+INFO: 2021/07/21 02:51:01 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:51:41 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:52:00 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:54:35 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 02:57:17 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 03:57:50 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:03:39 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:05:42 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:06:20 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:08:30 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:10:36 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:11:00 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:11:29 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:11:53 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:12:21 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:13:29 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:14:06 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:14:39 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:15:02 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:19:14 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:22:20 middleware.go:59: Unauthorized
+INFO: 2021/07/21 04:24:51 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:24:53 user.go:115: user id can be empty
+INFO: 2021/07/21 04:26:18 init.go:52: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/21 04:26:20 user.go:115: user id can be empty
+INFO: 2021/07/21 05:04:43 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'

@@ -1,0 +1,2010 @@
+basePath: /v2
+definitions:
+  model.Branch:
+    properties:
+      active:
+        type: boolean
+      address:
+        type: string
+      companyId:
+        type: integer
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      id:
+        type: integer
+      legalAddress:
+        type: string
+      name:
+        type: string
+      phone1:
+        type: string
+      phone2:
+        type: string
+      photo:
+        type: string
+      untilDate:
+        type: string
+      updatedAt:
+        type: string
+      userId:
+        type: integer
+      x:
+        type: number
+      "y":
+        type: number
+    type: object
+  model.Branches:
+    items:
+      properties:
+        active:
+          type: boolean
+        address:
+          type: string
+        companyId:
+          type: integer
+        createdAt:
+          type: string
+        deletedAt:
+          type: string
+        id:
+          type: integer
+        legalAddress:
+          type: string
+        name:
+          type: string
+        phone1:
+          type: string
+        phone2:
+          type: string
+        photo:
+          type: string
+        untilDate:
+          type: string
+        updatedAt:
+          type: string
+        userId:
+          type: integer
+        x:
+          type: number
+        "y":
+          type: number
+      type: object
+    type: array
+  model.Companies:
+    items:
+      properties:
+        active:
+          type: boolean
+        address:
+          type: string
+        createdAt:
+          type: string
+        deletedAt:
+          type: string
+        description:
+          type: string
+        fio:
+          type: string
+        icon:
+          type: string
+        id:
+          type: integer
+        inn:
+          type: integer
+        legalAddress:
+          type: string
+        mail:
+          type: string
+        name:
+          type: string
+        phone1:
+          type: string
+        phone2:
+          type: string
+        site:
+          type: string
+        updatedAt:
+          type: string
+        userId:
+          type: integer
+        x:
+          type: number
+        "y":
+          type: number
+      type: object
+    type: array
+  model.Company:
+    properties:
+      active:
+        type: boolean
+      address:
+        type: string
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      description:
+        type: string
+      fio:
+        type: string
+      icon:
+        type: string
+      id:
+        type: integer
+      inn:
+        type: integer
+      legalAddress:
+        type: string
+      mail:
+        type: string
+      name:
+        type: string
+      phone1:
+        type: string
+      phone2:
+        type: string
+      site:
+        type: string
+      updatedAt:
+        type: string
+      userId:
+        type: integer
+      x:
+        type: number
+      "y":
+        type: number
+    type: object
+  model.JwtUser:
+    properties:
+      branchId:
+        type: integer
+      companyId:
+        type: integer
+      id:
+        type: integer
+      roles:
+        $ref: '#/definitions/model.Roles'
+        type: object
+      username:
+        type: string
+    type: object
+  model.Response:
+    properties:
+      count:
+        type: integer
+      data:
+        type: object
+      limit:
+        type: integer
+      page:
+        type: integer
+    type: object
+  model.ResponseError:
+    properties:
+      message:
+        type: string
+    type: object
+  model.Role:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.Roles:
+    items:
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      type: object
+    type: array
+  model.SigInUser:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  model.User:
+    properties:
+      active:
+        type: boolean
+      branchId:
+        type: integer
+      branches:
+        $ref: '#/definitions/model.Branches'
+        type: object
+      companies:
+        $ref: '#/definitions/model.Companies'
+        type: object
+      companyId:
+        type: integer
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      fio:
+        type: string
+      id:
+        type: integer
+      password:
+        type: string
+      phone:
+        type: string
+      pinCode:
+        type: integer
+      rate:
+        type: number
+      roles:
+        $ref: '#/definitions/model.Roles'
+        type: object
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
+  request.CategoryComponent:
+    properties:
+      active:
+        type: boolean
+      count:
+        type: number
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      photo:
+        type: string
+      sell_price:
+        type: number
+      units:
+        type: string
+    type: object
+  request.Component:
+    properties:
+      active:
+        type: boolean
+      buy_price:
+        type: number
+      category_component_id:
+        type: integer
+      count:
+        type: number
+      id:
+        type: integer
+      name:
+        type: string
+      units:
+        type: string
+    type: object
+host: petstore.swagger.io
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server Petstore server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /test/create-component:
+    post:
+      description: CreateComponent
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/request.Component'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - test
+  /test/create-component-category:
+    post:
+      description: CreateComponentCategory
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/request.CategoryComponent'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - test
+  /v2/admin/branch/{companyId}:
+    post:
+      description: create branch
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/branch/{id}:
+    delete:
+      description: find branch
+      parameters:
+      - description: branch id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+    get:
+      description: find branch
+      parameters:
+      - description: branch id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/branch/{id}/{companyId}:
+    put:
+      description: update branch
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/branch/{name}/{companyId}:
+    get:
+      description: find branch
+      parameters:
+      - description: branch name
+        in: path
+        name: name
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/branch/company/{id}:
+    get:
+      description: branches
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/branch/user/{id}:
+    get:
+      description: find branch
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Branch'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin branch
+  /v2/admin/companies/:
+    get:
+      description: users
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+  /v2/admin/user-fio/{fio}:
+    get:
+      description: find user
+      parameters:
+      - description: user fio
+        in: path
+        name: fio
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user-name/{name}:
+    get:
+      description: find user
+      parameters:
+      - description: user fio
+        in: path
+        name: fio
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user/:
+    post:
+      description: create user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user/{id}:
+    delete:
+      description: delete user
+      operationId: Delete
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+    put:
+      description: update user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user/{id}/role/{id}:
+    delete:
+      description: delete user role
+      operationId: DeleteRole
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: role id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user/branch/{id}:
+    get:
+      description: branch users
+      operationId: FindByBranchUsers
+      parameters:
+      - description: branch id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/user/company/{id}:
+    get:
+      description: company users
+      operationId: FindByCompanyUsers
+      parameters:
+      - description: company id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/admin/users/:
+    get:
+      description: users
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin user
+  /v2/auth/me:
+    post:
+      description: get user info
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.JwtUser'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - auth
+  /v2/auth/sign-in:
+    post:
+      description: user login
+      parameters:
+      - description: user info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.SigInUser'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.JwtUser'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - auth
+  /v2/branch/{id}/:
+    get:
+      description: create user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+    put:
+      description: create user
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+  /v2/branch/{id}/user:
+    get:
+      description: users
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+  /v2/branch/{id}/user-fio/{fio}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+  /v2/branch/{id}/user-name/{username}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+  /v2/branch/{id}/user/:
+    post:
+      description: create user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+  /v2/branch/{id}/user/{id}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - branch
+    put:
+      description: update user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company:
+    post:
+      description: find company
+      parameters:
+      - description: model.Company
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Company'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+  /v2/company/{id}:
+    delete:
+      description: find company
+      parameters:
+      - description: company id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+    get:
+      description: find company
+      parameters:
+      - description: company id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+    put:
+      description: find company
+      parameters:
+      - description: model.Company
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Company'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+  /v2/company/{id}/branch:
+    get:
+      description: branches
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+    post:
+      description: create branch
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/branch/{id}:
+    delete:
+      description: update branch
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+    get:
+      description: find branch
+      parameters:
+      - description: branch id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+    put:
+      description: update branch
+      parameters:
+      - description: model.Branch
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Branch'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/branch/{name}:
+    get:
+      description: find branch
+      parameters:
+      - description: branch name
+        in: path
+        name: name
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Branch'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/branch/user/{id}:
+    get:
+      description: find branch
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Branch'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user:
+    get:
+      description: users
+      parameters:
+      - description: page
+        in: path
+        name: page
+        type: integer
+      - description: limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user-fio/{fio}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user-name/{username}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user/:
+    post:
+      description: create user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+    put:
+      description: update user
+      parameters:
+      - description: model.User
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user/{id}:
+    delete:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user/{id}/role/{id}:
+    delete:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: role id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{id}/user/branch/{id}:
+    get:
+      description: find user
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - company
+  /v2/company/{name}:
+    get:
+      description: find company
+      parameters:
+      - description: company name
+        in: path
+        name: name
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+  /v2/company/branch/{id}:
+    get:
+      description: find company
+      parameters:
+      - description: branch id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+  /v2/company/user/{id}:
+    get:
+      description: find company
+      parameters:
+      - description: user id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Company'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/model.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      tags:
+      - admin company
+swagger: "2.0"

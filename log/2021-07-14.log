@@ -1,0 +1,2 @@
+INFO: 2021/07/14 23:34:10 main.go:30: error auth socket invalid token reason:  invalid character '\x19' in string literal
+INFO: 2021/07/14 23:34:41 main.go:30: error auth socket invalid token reason:  invalid character '\x19' in string literal

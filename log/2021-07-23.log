@@ -1,0 +1,1 @@
+INFO: 2021/07/23 19:18:57 init.go:58: Error 1062: Duplicate entry 'admin' for key 'username'

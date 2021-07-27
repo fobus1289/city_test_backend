@@ -1,0 +1,25 @@
+INFO: 2021/07/27 01:17:30 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:19:29 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:25:44 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:27:25 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:33:22 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:35:16 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:42:35 main.go:42: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/27 01:44:26 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 01:53:37 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 02:09:04 main.go:42: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/27 02:19:36 main.go:42: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/27 02:33:08 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 02:34:10 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 02:35:58 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 02:36:23 main.go:42: error auth socket invalid token reason:  token contains an invalid number of segments
+INFO: 2021/07/27 02:42:48 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 03:52:47 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:06:47 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:08:26 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:20:22 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:28:34 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:30:05 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:45:45 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:46:56 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
+INFO: 2021/07/27 05:48:01 init.go:82: Error 1062: Duplicate entry 'admin' for key 'username'
